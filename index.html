@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style.css">
+	<link href='https://fonts.googleapis.com/css?family=Bubblegum Sans' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogging Website</title>
+</head>
+<body>
+    <div class="container">
+    <nav class="navbar">
+		<h1 id="heading1"style="color: white">Blogging Website</h1>
+        <ul class="link-container">
+            <li class="link-items  "> <button id="button1" class="create-blog"> CREATE A BLOG </button> </li>
+
+        </ul>
+
+    </nav>
+
+       <!-- ------modal create post-------- -->
+       <div class="modal hide ">
+        <div class="modal-items">
+            <div class="cross">
+             <h1>Create A Post  </h1> <span> <button class="close">    X</button> </span>
+         </div>
+         <input type="text" id="topic" placeholder="Enter your heading...">
+         <textarea name="" id="description" cols="20" rows="5" placeholder="Enter your Blog post..."></textarea>
+
+         <div class="btns">
+            <button class="publish btn" onclick="createPost()">Publish post</button>
+            <button class="cancel btn">Cancel post</button>
+        </div>
+    </div>
+</div>
+<!-- --------modal editing----- -->
+<div class="modal-edit hide">
+    <div class="modal-items">
+        <div class="cross">
+            <h1>Edit a post  </h1> <span> <button  class="close" onclick="closebtn()">X</button> </span>
+     </div>
+     <input type="text" id="edit-topic" placeholder="Enter your heading...">
+     <textarea name="" id="edit-description" cols="20" rows="5" placeholder="Enter your Blog post..."></textarea>
+
+     <div class="btns">
+        <button class="btn" id="edit-post-button" onclick="saveEditPost()">Save post</button>
+        <button class="cancel btn" id="delete-post-button" onclick="deletePost()">Delete post</button>
+    </div>
+
+</div>
+</div>
+
+
+<!-- ----------blog page------ -->
+<div class="blog" id="showPost">
+
+</div>
+</div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
